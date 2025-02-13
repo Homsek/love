@@ -1,0 +1,37 @@
+$container: 1440px;
+$back: rgb(255, 204, 228);
+$main: rgb(228, 40, 40);
+$block: rgb(255, 214, 232);
+
+@font-face {
+   font-family: teddy;
+   src: url(../fonts/Ostrovsky-Bold_0.otf);
+}
+
+body {
+   background-color: $back;
+   font-family: teddy;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+._container {
+   max-width: $container;
+   margin: 0 auto;
+   padding: 80px 20px;
+}
+
+._title-block {
+   font-size: clamp(22px, 4vw, 30px);
+   color: white;
+   margin-bottom: 40px;
+   line-height: 130%;
+   background-color: $main;
+   padding: 10px;
+   border-radius: 20px;
+   text-align: center;
+}
+
+@import "_null", "_main";

@@ -1,0 +1,249 @@
+.screen {
+   position: relative;
+   overflow: hidden;
+
+   &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      bottom: 0;
+      width: 30%;
+      height: 100%;
+      background-color: $main;
+      opacity: 0.2;
+   }
+
+   &__container {
+      min-height: 100vh;
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__img {
+      flex: 1;
+      position: relative;
+      max-width: 500px;
+      height: 500px;
+      border-radius: 20px;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   &__content {
+      flex: 1;
+   }
+
+   &__title {
+      font-size: clamp(25px, 4vw, 50px);
+      line-height: 130%;
+      margin-bottom: 40px;
+      span {
+         color: $main;
+      }
+   }
+
+   &__buttons {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+   }
+
+   &__button {
+      padding: 20px 30px;
+      border-radius: 20px;
+      color: $main;
+      background-color: white;
+      font-size: 18px;
+      line-height: 130%;
+      transition: all 0.3s;
+   }
+
+   &__button:hover {
+      box-shadow: 0 0 50px white;
+   }
+
+   @media (max-width: 1024px) {
+      &__container {
+         flex-direction: column;
+      }
+
+      &__img,
+      &__content {
+         flex: 0;
+         text-align: center;
+      }
+
+      &__buttons {
+         justify-content: center;
+         flex-wrap: wrap;
+      }
+
+      &__img {
+         height: 800px;
+      }
+   }
+}
+
+// !love
+
+.love {
+   background-color: $block;
+   &__container {
+   }
+
+   &__title {
+   }
+
+   &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 18px;
+      line-height: 140%;
+   }
+
+   &__list {
+      margin-top: 50px;
+      font-size: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      line-height: 130%;
+
+      span {
+         color: $main;
+      }
+   }
+
+   &__item {
+      padding: 10px 20px;
+      border-radius: 20px;
+      background-color: $main;
+      width: fit-content;
+      color: white;
+   }
+}
+
+// !comparison
+.comparison {
+   &__container {
+   }
+
+   &__title {
+   }
+
+   &__text {
+      font-size: 18px;
+      line-height: 140%;
+   }
+
+   &__flex {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+   }
+
+   &__item {
+      text-align: center;
+      background-color: white;
+      border-radius: 20px;
+
+      p {
+         font-size: 16px;
+         line-height: 130%;
+         padding-bottom: 20px;
+      }
+   }
+
+   &__img {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   @media (max-width: 768px) {
+      &__flex {
+         grid-template-columns: 1fr;
+      }
+   }
+}
+
+// !music
+
+.music {
+   background-color: $block;
+   &__container {
+   }
+
+   &__title {
+   }
+
+   &__text {
+      font-size: 18px;
+      line-height: 140%;
+   }
+
+   &__flex {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+   }
+
+   &__item {
+      background-color: $main;
+      border-radius: 20px;
+      iframe {
+         border-radius: 20px;
+         margin-bottom: 20px;
+      }
+
+      p {
+         font-size: 16px;
+         line-height: 130%;
+         margin-bottom: 20px;
+         text-align: center;
+         color: white;
+      }
+   }
+
+   @media (max-width: 768px) {
+      &__flex {
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
+}
+
+// !ending
+
+.ending {
+   &__container {
+   }
+
+   &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 18px;
+      line-height: 130%;
+   }
+}
